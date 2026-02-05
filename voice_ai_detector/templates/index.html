@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SURAKSHA AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>SURAKSHA <span>AI</span></h1>
+
+    <!-- API KEY -->
+    <input type="password" id="apiKey" placeholder="Enter API Key">
+
+    <!-- FILE UPLOAD -->
+    <label class="upload-box">
+        <input type="file" id="audioFile" accept="audio/*">
+        <span id="fileName">Upload Voice Sample</span>
+    </label>
+
+    <button onclick="analyze()">Analyze Voice</button>
+
+    <div class="divider"></div>
+
+    <div class="result">
+        <p class="small">ANALYSIS</p>
+        <h2 id="prediction">Waiting...</h2>
+
+        <p class="small">CONFIDENCE</p>
+        <div class="meter">
+            <div id="bar"></div>
+        </div>
+        <p id="confidence">0%</p>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
